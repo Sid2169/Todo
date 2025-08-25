@@ -1,0 +1,48 @@
+:root {
+    --primary-bg: #121212; /* Dark background for the main area */
+    --secondary-bg: #1E1E1E; /* Slightly lighter background for cards or lists */
+    --primary-text: #E0E0E0; /* Light text for readability */
+    --secondary-text: #B0B0B0; /* Lighter text for secondary information */
+    --accent-color: #4CAF50; /* Green for success messages or buttons */
+    --error-color: #f44336; /* Red for error messages */
+    --border-color: #333333; /* Dark border color for separation */
+    --hover-bg: #2A2A2A; /* Background color for hover effects */
+    --active-bg: #3A3A3A; /* Background color for active items */
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-toggle,
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-text);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover,
+.theme-toggle:hover {
+    background-color: var(--hover-bg);
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
