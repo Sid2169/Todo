@@ -1,5 +1,8 @@
 import { HeaderComp } from './HeaderComp.js';
+import { SideBarComp } from './SideBarComp.js'
 
+const rootElement = document.getElementById('root');
 export const loadUI = () => {
-    document.getElementById('root').appendChild(HeaderComp);
+    rootElement.appendChild(HeaderComp);
+    rootElement.appendChild(SideBarComp);
 }

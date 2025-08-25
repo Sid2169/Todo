@@ -46,3 +46,70 @@ body {
     font-size: 24px;
     margin: 0;
 }
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    position: fixed; /* Fixed position for sidebar */
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Smooth transition for toggling */
+    transform: translateX(-100%); /* Initially hidden */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.add-project {
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.delete-project {
+    background: none;
+    border: none;
+    color: var(--error-color);
+    cursor: pointer;
+}
+
+#btn-close-side-bar {
+    background: none;
+    border: none;
+    color: var(--secondary-text);
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    margin: 0.2rem;
+}
+#btn-close-side-bar:hover {
+    background-color: var(--hover-bg);
+}
