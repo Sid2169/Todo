@@ -10,6 +10,19 @@
     --active-bg: #3A3A3A; /* Background color for active items */
 }
 
+/* Light theme color palette  */
+.light-theme {
+    --primary-bg: #E0E0E0;
+    --secondary-bg: #B0B0B0;
+    --primary-text: #121212;
+    --secondary-text: #333333;
+    --accent-color: #4CAF50;
+    --error-color: #f44336;
+    --border-color: #333333;
+    --hover-bg: #E0E0E0;
+    --active-bg: #B0B0B0;
+}
+
 body {
     background-color: var(--primary-bg);
     color: var(--primary-text);

@@ -15,4 +15,11 @@ sideBarToggle.addEventListener('click', () => {
 const closeSideBar = document.getElementById('btn-close-side-bar');
 closeSideBar.addEventListener('click', () => {
     sideBar.classList.remove('open');
-})
+});
+
+//Theme Toggle;
+const themeToggle = document.querySelector('.theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+});
+
