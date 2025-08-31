@@ -23,3 +23,15 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
 });
 
+//Add Project button:
+const newProjectModal = document.getElementById('newProjectModal');
+const addProjectBtn = document.getElementById('addProjectBtn');
+addProjectBtn.addEventListener('click', () => {
+    newProjectModal.classList.remove('hidden');
+});
+
+//Project form cancel button:
+const closeModal = document.getElementById('closeModal');
+closeModal.addEventListener('click', () => {
+    newProjectModal.classList.add('hidden');
+});

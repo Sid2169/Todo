@@ -18,4 +18,3 @@ ProjectFormComp.innerHTML = `
 `;
 ProjectFormComp.classList.add('modal', 'hidden');
 ProjectFormComp.id = 'newProjectModal';
-    
