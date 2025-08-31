@@ -126,3 +126,101 @@ body {
 #btn-close-side-bar:hover {
     background-color: var(--hover-bg);
 }
+
+/* Project Form popup styling */
+/* Modal overlay */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Hidden state */
+  .modal.hidden {
+    display: none;
+  }
+  
+  /* Popup box */
+  .modal-content {
+    background: var(--secondary-bg);
+    color: var(--primary-text);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90%;
+    border: 1px solid var(--border-color);
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Form elements */
+  .modal-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+  }
+  
+  .modal-content input,
+  .modal-content textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    font-size: 1rem;
+  }
+  
+  .modal-content input:focus,
+  .modal-content textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: var(--active-bg);
+  }
+  
+  /* Buttons */
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  
+  .btn-accent {
+    background: var(--accent-color);
+    color: #fff;
+  }
+  
+  .btn-accent:hover {
+    background: #45a049; /* Slightly darker green */
+  }
+  
+  .btn-cancel {
+    background: var(--hover-bg);
+    color: var(--primary-text);
+  }
+  
+  .btn-cancel:hover {
+    background: var(--active-bg);
+  }
+  
