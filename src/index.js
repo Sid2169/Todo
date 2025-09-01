@@ -1,6 +1,7 @@
 import './styles.css'
 console.log("Js is working");
 import { loadUI } from './modules/loadUI.js';
+import { createProject } from './modules/createProject.js';
 
 //Load UI:
 loadUI();
@@ -33,5 +34,15 @@ addProjectBtn.addEventListener('click', () => {
 //Project form cancel button:
 const closeModal = document.getElementById('closeModal');
 closeModal.addEventListener('click', () => {
+    newProjectModal.classList.add('hidden');
+});
+
+//Create Project form submit button:
+const newProjectForm = document.getElementById('newProjectForm');
+newProjectForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const projectName = document.getElementById('projectName').value;
+    const projectDescription = document.getElementById('projectDescription').value;
+    createProject(projectName, projectDescription);
     newProjectModal.classList.add('hidden');
 });
