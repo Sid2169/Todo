@@ -3,6 +3,13 @@ import { projectList } from "./projectList.js";
 
 //Create Project and update project list in sidebar
 export const createProject = (projectName, projectDescription) => {
+    //Check if project already exists
+    const projectExists = projectList.find(project => project.projectName === projectName);
+    if (projectExists) {
+        alert('Project already exists');
+        return;
+    }
+
     const project = new Project(projectName, projectDescription);
     projectList.push(project);
     const projectItem = document.createElement('li');
