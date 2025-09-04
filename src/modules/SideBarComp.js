@@ -1,3 +1,5 @@
+//SideBarComp.js: Module for Side Bar Component
+
 export const SideBarComp = document.createElement('div');
 SideBarComp.innerHTML = `
      <aside class="sidebar" id="sidebar">

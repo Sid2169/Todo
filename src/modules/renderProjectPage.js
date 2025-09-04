@@ -1,3 +1,5 @@
+//renderProjectPage.js: Module for rendering Project Page
+
 import { projectList } from "./projectList.js";
 
 export const renderProjectPage = (projectName) => {

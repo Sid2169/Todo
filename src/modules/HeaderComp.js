@@ -1,3 +1,4 @@
+//HeaderComp.js: Module for Header Component
 const HeaderComp = document.createElement('div');
 HeaderComp.innerHTML = `
     <header class="header">

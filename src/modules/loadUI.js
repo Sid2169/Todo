@@ -1,3 +1,5 @@
+//loadUI.js: Module for loading UI components
+
 import { HeaderComp } from './HeaderComp.js';
 import { SideBarComp } from './SideBarComp.js'
 import { ProjectFormComp } from './ProjectFormComp.js'

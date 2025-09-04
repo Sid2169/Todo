@@ -1,3 +1,5 @@
+//ProjectFormComp.js: Module for Project Form Component
+
 export const ProjectFormComp = document.createElement('div');
 ProjectFormComp.innerHTML = `
     <div class="modal-content">

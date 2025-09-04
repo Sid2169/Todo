@@ -1,3 +1,5 @@
+//index.js: Main file for Todo application
+
 import './styles.css'
 console.log("Js is working");
 import { loadUI } from './modules/loadUI.js';
