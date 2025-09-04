@@ -1,11 +1,11 @@
 /**
  * createProject.js
- * 
+ *
  * This module provides functionality to create new projects in the Todo application.
  * It handles project creation, validation for duplicate projects, DOM manipulation
  * to add project items to the sidebar, and sets up event listeners for project
  * interaction and deletion.
- * 
+ *
  * Main functionality:
  * - Creates new Project instances and adds them to the project list
  * - Validates that project names are unique
@@ -20,33 +20,47 @@ import { renderProjectPage } from "./renderProjectPage.js";
 
 //Create Project and update project list in sidebar
 export const createProject = (projectName, projectDescription) => {
-    //Check if project already exists
-    const projectExists = projectList.find(project => project.projectName === projectName);
-    if (projectExists) {
-        alert('Project already exists');
-        return;
-    }
-    //Create new project
-    const project = new Project(projectName, projectDescription);
-    projectList.push(project);
-    const projectItem = document.createElement('li');
-    projectItem.classList.add('project-item');
-    projectItem.innerHTML = `
+  //Check if project already exists
+  const projectExists = projectList.find(
+    (project) => project.projectName === projectName
+  );
+  if (projectExists) {
+    alert("Project already exists");
+    return;
+  }
+  //Create new project
+  const project = new Project(projectName, projectDescription);
+  projectList.push(project);
+  const projectItem = document.createElement("li");
+  projectItem.classList.add("project-item");
+  projectItem.innerHTML = `
         <span>${projectName}</span>
     `;
-    projectItem.addEventListener('click', () => {
-        renderProjectPage(project);
-    });
-    
-    //Add delete button
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-project');
-    deleteButton.innerHTML = '🗑️';
-    deleteButton.addEventListener('click', () => {
-        document.getElementById(`${project.projectName}`).remove();
-        projectList.splice(projectList.indexOf(project), 1);
-        projectItem.remove();
-    });
-    projectItem.appendChild(deleteButton);
-    document.getElementById('projectList').appendChild(projectItem);
-}
+  projectItem.addEventListener("click", () => {
+    renderProjectPage(project);
+  });
+
+  //Add delete button
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("delete-project");
+  deleteButton.innerHTML = "🗑️";
+  deleteButton.addEventListener("click", () => {
+    console.log(project.projectName);
+    const projectPage = document.getElementById(`${project.projectName}`);
+    console.log(projectPage);
+    if (projectPage) {
+      console.log("Project page found");
+      projectPage.remove();
+      setTimeout(() => {
+        document.querySelectorAll(`#${project.projectName}`).forEach((el) => {
+          el.remove();
+        });
+      }, 2000);
+      console.log("Project page removed");
+    }
+    projectList.splice(projectList.indexOf(project), 1);
+    projectItem.remove();
+  });
+  projectItem.appendChild(deleteButton);
+  document.getElementById("projectList").appendChild(projectItem);
+};
