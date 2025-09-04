@@ -1,5 +1,6 @@
 import { Project } from "./Project.js";
 import { projectList } from "./projectList.js";
+import { renderProjectPage } from "./renderProjectPage.js";
 
 //Create Project and update project list in sidebar
 export const createProject = (projectName, projectDescription) => {
@@ -17,6 +18,10 @@ export const createProject = (projectName, projectDescription) => {
     projectItem.innerHTML = `
         <span>${projectName}</span>
     `;
+    projectItem.addEventListener('click', () => {
+        renderProjectPage(projectName);
+    });
+    
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-project');
     deleteButton.innerHTML = '🗑️';
