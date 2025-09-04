@@ -43,6 +43,7 @@ export const createProject = (projectName, projectDescription) => {
     deleteButton.classList.add('delete-project');
     deleteButton.innerHTML = '🗑️';
     deleteButton.addEventListener('click', () => {
+        document.getElementById(`${project.projectName}`).remove();
         projectList.splice(projectList.indexOf(project), 1);
         projectItem.remove();
     });

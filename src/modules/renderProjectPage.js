@@ -12,6 +12,7 @@ export const renderProjectPage = (project) => {
         <h2>${project.projectName}</h2>
         <p>${project.projectDescription}</p>
     `;
+    projectPage.id = project.projectName;
 
     //Render Task List
     const taskList = document.createElement('ul');
