@@ -2,10 +2,11 @@
 
 import { projectList } from "./projectList.js";
 
-export const renderProjectPage = (projectName) => {
+export const renderProjectPage = (project) => {
     
     //Render Project page heading and Description
-    const project = projectList.find(project => project.projectName === projectName);
+    if (!project) return;
+
     const projectPage = document.createElement('div');
     projectPage.innerHTML = `
         <h2>${project.projectName}</h2>

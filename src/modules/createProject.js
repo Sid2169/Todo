@@ -35,7 +35,7 @@ export const createProject = (projectName, projectDescription) => {
         <span>${projectName}</span>
     `;
     projectItem.addEventListener('click', () => {
-        renderProjectPage(projectName);
+        renderProjectPage(project);
     });
     
     //Add delete button
